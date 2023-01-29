@@ -12,6 +12,23 @@ int main(void)
     double x0 = 2.0, x1 = 1.5, x2, tol = 10e-6;
     double fx0, fx1,fx2;
 
+    //to experiment.
+    x0 = .2;
+    x1 = 100.63;
+
+    /*
+    from this experimenting, I found that [x0,x1] can contain the root,
+    or the root can be either in the left side of x0 or right side of x1. In all
+    three cases, the algorithm will get to the correct root eventually.
+
+    But in the case of false position method, the root must situate between [a,b]
+
+    Here, a and b are indicating a range.
+    x0,x1 however does not indicate any range. These two points are taken for calculating derivative.
+
+    secant method, thus, is more flexible for finding roots.
+    */
+
     int iterationVariable = 1;
 
     fx0 = F(x0);
